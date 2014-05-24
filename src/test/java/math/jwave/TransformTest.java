@@ -23,53 +23,25 @@
  */
 package math.jwave;
 
-import static org.junit.Assert.*;
 import math.jwave.datatypes.Complex;
 import math.jwave.exceptions.JWaveException;
 import math.jwave.exceptions.JWaveFailure;
 import math.jwave.transforms.FastWaveletTransform;
-import math.jwave.transforms.wavelets.Battle23;
 import math.jwave.transforms.wavelets.DiscreteMayer;
 import math.jwave.transforms.wavelets.Haar1;
 import math.jwave.transforms.wavelets.Haar1Orthogonal;
 import math.jwave.transforms.wavelets.Wavelet;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal11;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal13;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal15;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal22;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal24;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal26;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal28;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal31;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal33;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal35;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal37;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal39;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal44;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal55;
-import math.jwave.transforms.wavelets.biorthogonal.BiOrthogonal68;
-import math.jwave.transforms.wavelets.coiflet.Coiflet1;
-import math.jwave.transforms.wavelets.coiflet.Coiflet2;
-import math.jwave.transforms.wavelets.coiflet.Coiflet3;
-import math.jwave.transforms.wavelets.coiflet.Coiflet4;
-import math.jwave.transforms.wavelets.coiflet.Coiflet5;
-import math.jwave.transforms.wavelets.daubechies.Daubechies10;
-import math.jwave.transforms.wavelets.daubechies.Daubechies2;
-import math.jwave.transforms.wavelets.daubechies.Daubechies20;
-import math.jwave.transforms.wavelets.daubechies.Daubechies3;
-import math.jwave.transforms.wavelets.daubechies.Daubechies4;
-import math.jwave.transforms.wavelets.daubechies.Daubechies5;
-import math.jwave.transforms.wavelets.daubechies.Daubechies6;
-import math.jwave.transforms.wavelets.daubechies.Daubechies7;
-import math.jwave.transforms.wavelets.daubechies.Daubechies8;
-import math.jwave.transforms.wavelets.daubechies.Daubechies9;
+import math.jwave.transforms.wavelets.biorthogonal.*;
+import math.jwave.transforms.wavelets.coiflet.*;
+import math.jwave.transforms.wavelets.daubechies.*;
 import math.jwave.transforms.wavelets.legendre.Legendre1;
 import math.jwave.transforms.wavelets.legendre.Legendre2;
 import math.jwave.transforms.wavelets.legendre.Legendre3;
 import math.jwave.transforms.wavelets.symlets.Symlets2;
 import math.jwave.transforms.wavelets.symlets.Symlets20;
-
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Christian Scheiblich (cscheiblich@gmail.com)
