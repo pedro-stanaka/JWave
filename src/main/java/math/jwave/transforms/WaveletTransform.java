@@ -40,6 +40,9 @@ public abstract class WaveletTransform extends BasicTransform {
    */
   protected Wavelet _wavelet;
 
+
+  protected int iteration = -1;
+
   /**
    * Constructor checks whether the given object is all right.
    * 
@@ -61,5 +64,9 @@ public abstract class WaveletTransform extends BasicTransform {
     _wavelet = wavelet;
 
   } // check for objects od type Wavelet
+
+  public void setIteration(int iteration){
+      this.iteration = iteration;
+  }
 
 } // WaveletTransform

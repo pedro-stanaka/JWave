@@ -73,7 +73,7 @@ public class FastWaveletTransform extends WaveletTransform {
 
     int h = arrHilb.length;
     int transformWavelength = _wavelet.getTransformWavelength( ); // 2, 4, 8, 16, 32, ...
-
+    int iteration = 0;
     while( h >= transformWavelength ) {
 
       double[ ] arrTempPart = _wavelet.forward( arrHilb, h );
@@ -82,6 +82,10 @@ public class FastWaveletTransform extends WaveletTransform {
         arrHilb[ i ] = arrTempPart[ i ];
 
       h = h >> 1;
+
+      if((this.iteration != -1) && (++iteration == this.iteration)){
+        break;  // Exit while
+      }
 
     } // levels
 
